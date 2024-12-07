@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Home Price Prediction</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Link to JS file -->
+    <script src="app.js"></script>
+</head>
+<body>
+
+<!-- Background Image -->
+<div class="img"></div>
+
+<!-- Welcome Text -->
+<h1 class="welcome-text">HI, WELCOME TO SHIV REAL ESTATE</h1>
+
+<!-- About Section -->
+<div class="about-section">
+    <h2>About Us</h2>
+    <p><strong>SHIV REAL ESTATE</strong> was established in 2005 and is registered under the <strong>Real Estate Regulatory Authority (RERA)</strong>. With years of experience in building dreams, we bring your vision to life.</p>
+    <p class="slogan">"Building Dreams, Brick by Brick!"</p>
+</div>
+
+<!-- Form for Area and BHK -->
+<form class="form">
+    <h2>Area (Square Feet)</h2>
+    <input class="area" type="text" id="uiSqft" name="Squareft" placeholder="Enter area in sqft" value="1000">
+
+    <h2>BHK</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+        <label for="radio-bhk-1">1</label>
+        <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+        <label for="radio-bhk-2">2</label>
+        <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+        <label for="radio-bhk-3">3</label>
+    </div>
+</form>
+
+<!-- Form for Bathrooms, Location, and Estimate Button -->
+<form class="form">
+    <h2>Bath</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+        <label for="radio-bath-1">1</label>
+        <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+        <label for="radio-bath-2">2</label>
+        <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+        <label for="radio-bath-3">3</label>
+    </div>
+
+    <h2>Location</h2>
+    <div>
+        <select class="location" id="uiLocations">
+            <option value="" disabled selected>Choose a Location</option>
+            <option>Electronic City</option>
+            <option>Rajaji Nagar</option>
+        </select>
+    </div>
+
+    <!-- Estimate Price Button -->
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+
+    <!-- Result Area -->
+    <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+</form>
+
+</body>
+</html>
